@@ -61,9 +61,9 @@ const About = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
                 href="#gallery" 
-                className="px-6 py-3 bg-black text-white text-center font-medium rounded hover:bg-black/90 transition-all duration-200"
+                className="text-center"
               >
-                View My Work
+                <button className="glow-button">View My Work</button>
               </a>
               <a 
                 href="#contact" 
