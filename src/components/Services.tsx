@@ -8,7 +8,7 @@ import {
   Heart, 
   ShoppingBag, 
   User, 
-  Buildings
+  Building
 } from 'lucide-react';
 
 const services = [
@@ -40,7 +40,7 @@ const services = [
     id: 5,
     title: 'Commercial Photography',
     description: 'Elevate your brand with professional imagery for marketing, advertising, and corporate needs.',
-    icon: <Buildings className="w-8 h-8" />,
+    icon: <Building className="w-8 h-8" />,
   },
   {
     id: 6,

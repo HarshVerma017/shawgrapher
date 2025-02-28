@@ -9,7 +9,6 @@ import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import { useInView } from 'react-intersection-observer';
-import { lov } from 'react-intersection-observer';
 
 const Index = () => {
   useEffect(() => {
