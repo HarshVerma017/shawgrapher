@@ -1,13 +1,25 @@
-
 import React, { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 import { ChevronDown } from 'lucide-react';
+import '@/hero.css'; // Import the CSS file for the button styles
 
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isScrolling, setIsScrolling] = useState(false);
 
   useEffect(() => {
     setIsLoaded(true);
+
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolling(true);
+      } else {
+        setIsScrolling(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -47,22 +59,28 @@ const Hero = () => {
         </p>
         
         <a 
-          href="#gallery" 
+          href="#gallery"
           className={cn(
-            "mt-12 px-8 py-3 bg-white text-black font-medium rounded hover:bg-opacity-90 transition-all duration-200 opacity-0 transform",
+            "mt-12 opacity-0 transform",
             isLoaded && "delayed-fade-in-long"
           )}
         >
-          View Portfolio
+          <button className="button" data-text="Awesome">
+            <span className="actual-text">&nbsp;Portfolio&nbsp;</span>
+            <span aria-hidden="true" className="hover-text">&nbsp;Portfolio&nbsp;</span>
+          </button>
         </a>
       </div>
       
       <a 
         href="#about" 
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white z-10 animate-bounce"
+        className={cn(
+          "absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white z-10 transition-opacity duration-500",
+          isScrolling ? "opacity-0 pointer-events-none" : "opacity-100"
+        )}
         aria-label="Scroll to about section"
       >
-        <ChevronDown size={30} className="opacity-70" />
+        <ChevronDown size={30} className="opacity-70 animate-bounce" />
       </a>
     </section>
   );
