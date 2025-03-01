@@ -60,21 +60,18 @@ const About = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-            <a 
-              href="#gallery" 
-              className="px-6 py-3 bg-black text-white text-center font-medium rounded transition-all duration-300 hover:bg-gray-800 hover:scale-105"
+              <a 
+                href="#gallery" 
+                className="px-6 py-3 bg-black text-white text-center font-medium rounded hover:bg-black/90 transition-all duration-200"
               >
-              View My Work
-            </a>
-
-              <button 
-                  onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })} 
-                  className="custom-btn"
-                  >
-                  Get in Touch
-              </button>
-
-
+                View My Work
+              </a>
+              <a 
+                href="#contact" 
+                className="px-6 py-3 border border-black text-black text-center font-medium rounded hover:bg-black/5 transition-all duration-200"
+              >
+                Get In Touch
+              </a>
             </div>
           </div>
         </div>
