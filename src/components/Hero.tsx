@@ -61,14 +61,11 @@ const Hero = () => {
         <a 
           href="#gallery"
           className={cn(
-            "mt-12 opacity-0 transform",
+            "mt-12 px-8 py-3 bg-white text-black font-medium rounded hover:bg-opacity-90 transition-all duration-200 opacity-0 transform",
             isLoaded && "delayed-fade-in-long"
           )}
         >
-          <button className="button" data-text="Awesome">
-            <span className="actual-text">&nbsp;Portfolio&nbsp;</span>
-            <span aria-hidden="true" className="hover-text">&nbsp;Portfolio&nbsp;</span>
-          </button>
+          View Portfolio
         </a>
       </div>
       
