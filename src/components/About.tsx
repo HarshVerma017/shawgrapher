@@ -11,11 +11,10 @@ const About = () => {
 
   return (
     <section
-  id="about"
-  ref={aboutRef}
-  className="py-24 md:py-32 bg-gray-900 text-white"
->
-
+      id="about"
+      ref={aboutRef}
+      className="py-24 md:py-32 bg-white"
+    >
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-center gap-12 lg:gap-16">
           <div className={cn(
@@ -62,9 +61,9 @@ const About = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
                 href="#gallery" 
-                className="px-6 py-3 bg-black text-white text-center font-medium rounded hover:bg-black/90 transition-all duration-200"
+                className="text-center"
               >
-                View My Work
+                <button className="glow-button">View My Work</button>
               </a>
               <a 
                 href="#contact" 

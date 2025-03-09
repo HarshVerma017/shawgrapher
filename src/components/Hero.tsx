@@ -1,7 +1,7 @@
+
 import React, { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 import { ChevronDown } from 'lucide-react';
-import '@/hero.css'; // Import the CSS file for the button styles
 
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -47,13 +47,13 @@ const Hero = () => {
         </p>
         
         <a 
-          href="#gallery"
+          href="#gallery" 
           className={cn(
-            "mt-12 opacity-0 transform",
+            "mt-12 opacity-0",
             isLoaded && "delayed-fade-in-long"
           )}
         >
-          <button className="button" data-text="Awesome">
+          <button className="custom-button" data-text="Portfolio">
             <span className="actual-text">&nbsp;Portfolio&nbsp;</span>
             <span aria-hidden="true" className="hover-text">&nbsp;Portfolio&nbsp;</span>
           </button>
